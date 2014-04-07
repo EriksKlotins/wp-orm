@@ -10,14 +10,13 @@ Author URI: #
 License: GPLv2 or later
 */
 
+
+
 require dirname(__FILE__).'/DataType.php';
 require dirname(__FILE__).'/QueryBuilder.php';
 require dirname(__FILE__).'/BaseModel.php';
+require dirname(__FILE__).'/db.php';
 
 
-class WP_ORM extends \wp_orm\BaseModel
-{
-	
-}
 
 

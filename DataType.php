@@ -30,37 +30,37 @@ class DataType
 	 */
 	public static function toWpDate($datetime)
 	{
-		return ($datetime != null) ? $datetime->format('Y-m-d H:i:s') : '';
+		return ($datetime != null) ? $datetime->format('Y-m-d H:i:s') : null; //WARNING!!! for '' wp meta field, for tables 'null'
 	}
 
 	public static function toNumber($numberString)
 	{
-		return (strlen($numberString) != 0 ) ? (float) $numberString : null;
+		return (strlen($numberString) != 0 ) ? (float) $numberString : null; 
 	}
 
 	public static function toWpNumber($number)
 	{
-		return (!is_null($number)) ? (string) $number : '';
+		return (!is_null($number)) ? (string) $number : null; //WARNING!!! for '' wp meta field, for tables 'null'
 	}
 
 	public static function toInt($numberString)
 	{
-		return (strlen($numberString) != 0 ) ? (int) $numberString : null;
+		return (strlen($numberString) != 0 ) ? (int) $numberString : null; 
 	}
 
 	public static function toWpInt($number)
 	{
-		return (!is_null($number)) ? (string) ((int) $number) : '';
+		return (!is_null($number)) ? (string) ((int) $number) : null; //WARNING!!! for '' wp meta field, for tables 'null'
 	}
 
 	public static function toBoolean($boolString)
 	{
-		return (strlen($boolString) != 0 ) ? (boolean) $boolString : null;
+		return (strlen($boolString) != 0 ) ? (boolean) $boolString : null; 
 	}
 
 	public static function toWpBoolean($bool)
 	{
-		return (!is_null($bool)) ? (($bool) ? '1' : '0') : '';
+		return (!is_null($bool)) ? (($bool) ? '1' : '0') : null; //WARNING!!! for '' wp meta field, for tables 'null'
 	}
 
 }
